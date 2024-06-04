@@ -10,6 +10,8 @@ namespace AlbumReviews.Models
         public string Email { get; set; }
         public string PasswordHash {get;set; }
         
+        public ICollection<Review> Reviews { get; set; }
+        public ICollection<Reply> Replies { get; set; }
 
     }
 }
