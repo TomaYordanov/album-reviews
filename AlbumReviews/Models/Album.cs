@@ -16,5 +16,6 @@ namespace AlbumReviews.Models
         [StringLength(50)]
         public string Genre { get; set; }
         public ICollection<Review> Reviews { get; set; }
+        public ICollection<Track> Tracks { get; set; }
     }
 }

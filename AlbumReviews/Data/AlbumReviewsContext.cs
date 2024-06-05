@@ -8,6 +8,7 @@ namespace AlbumReviews.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Track> Tracks { get; set; }
         public DbSet<Reply> Replies { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,6 +32,11 @@ namespace AlbumReviews.Data
                 .HasOne(r => r.User)
                 .WithMany(u => u.Replies)
                 .HasForeignKey(r => r.UserId);
+
+            modelBuilder.Entity<Track>()
+                .HasOne(t => t.Album)
+                .WithMany(a => a.Tracks)
+                .HasForeignKey(t => t.AlbumId);
         }
 
 
