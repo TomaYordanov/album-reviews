@@ -7,6 +7,7 @@ namespace AlbumReviews.Models
     {
         [Key]
         public int ReplyId { get; set; }
+        [Required]
         public string ReplyText { get; set; }
         [ForeignKey(nameof(Review))]
         public int ReviewId { get; set; }

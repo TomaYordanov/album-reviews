@@ -6,9 +6,14 @@ namespace AlbumReviews.Models
     {
         [Key]
        public int AlbumId { get; set; }
+        [Required]
+        [StringLength(100, MinimumLength = 1) ]
         public string Title { get; set; }
+        [Required]
+        [StringLength(100, MinimumLength = 1)]
         public string Artist { get; set; }
         public int ReleaseYear { get; set; }
+        [StringLength(50)]
         public string Genre { get; set; }
         public ICollection<Review> Reviews { get; set; }
     }

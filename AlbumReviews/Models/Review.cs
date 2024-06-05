@@ -13,7 +13,9 @@ namespace AlbumReviews.Models
         [ForeignKey(nameof(User))]
         public int UserId { get; set; }
         public User User { get; set; }
+        [Range(0, 100)]
         public int Rating { get; set; }
+        
         public string ReviewText { get; set; }
         
 

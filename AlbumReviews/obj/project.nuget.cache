@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "d9HKCQTAE9Yu6lvWVPN1/ltuiWYHW2xvoJqT5I80m3PAlA2KRZYnU5jMid229IlrWxdegnp5wBeoDAAEJPFezQ==",
+  "dgSpecHash": "6Nyrbgw9ch+Epl8Garik/pxsExv1ef5Khj0lSlSB7LT4H+7mVCmyvUmJ2FMSJRZgbr/Gv6IpWCpu+9dIGVSUgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews\\AlbumReviews.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Toma\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.31\\microsoft.entityframeworkcore.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.31\\microsoft.entityframeworkcore.abstractions.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.31\\microsoft.entityframeworkcore.analyzers.6.0.31.nupkg.sha512",
+    "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.31\\microsoft.entityframeworkcore.design.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.31\\microsoft.entityframeworkcore.relational.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.31\\microsoft.entityframeworkcore.sqlserver.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
