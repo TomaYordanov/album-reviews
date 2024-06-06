@@ -5,6 +5,11 @@ namespace AlbumReviews.Data
 {
     public class AlbumReviewsContext : DbContext
     {
+        public AlbumReviewsContext(DbContextOptions<AlbumReviewsContext> options)
+            : base(options)
+        {
+
+        }
         public DbSet<User> Users { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<Review> Reviews { get; set; }
@@ -18,10 +23,13 @@ namespace AlbumReviews.Data
                 .WithMany(a => a.Reviews)
                 .HasForeignKey(r => r.AlbumId);
 
+
+
             modelBuilder.Entity<Review>()
                 .HasOne(r => r.User)
                 .WithMany(u => u.Reviews)
                 .HasForeignKey(r => r.UserId);
+
 
             modelBuilder.Entity<Reply>()
                 .HasOne(r => r.Review)
@@ -30,13 +38,22 @@ namespace AlbumReviews.Data
 
             modelBuilder.Entity<Reply>()
                 .HasOne(r => r.User)
-                .WithMany(u => u.Replies)
-                .HasForeignKey(r => r.UserId);
+                 .WithMany(u => u.Replies)
+                 .HasForeignKey(r => r.UserId);
+                  
+
 
             modelBuilder.Entity<Track>()
                 .HasOne(t => t.Album)
                 .WithMany(a => a.Tracks)
                 .HasForeignKey(t => t.AlbumId);
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MusicReviewDb;Trusted_Connection=True;MultipleActiveResultSets=true");
+            }
         }
 
 

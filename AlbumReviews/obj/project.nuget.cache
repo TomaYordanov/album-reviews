@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6Nyrbgw9ch+Epl8Garik/pxsExv1ef5Khj0lSlSB7LT4H+7mVCmyvUmJ2FMSJRZgbr/Gv6IpWCpu+9dIGVSUgA==",
+  "dgSpecHash": "RxWxTuy7DNGmg5mtXtj2Wxz5QqP5vUx8vzAppAOauWZmUGPgy59iOFhXSAlw7xX1XOY0CTVJ34pjLDnUR7zRPg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews\\AlbumReviews.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.31\\microsoft.entityframeworkcore.design.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.31\\microsoft.entityframeworkcore.relational.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.31\\microsoft.entityframeworkcore.sqlserver.6.0.31.nupkg.sha512",
+    "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.31\\microsoft.entityframeworkcore.tools.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
