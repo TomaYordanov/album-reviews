@@ -4,7 +4,7 @@
 
 namespace AlbumReviews.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -55,8 +55,7 @@ namespace AlbumReviews.Migrations
                         name: "FK_Tracks_Albums_AlbumId",
                         column: x => x.AlbumId,
                         principalTable: "Albums",
-                        principalColumn: "AlbumId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "AlbumId");
                 });
 
             migrationBuilder.CreateTable(
@@ -77,14 +76,12 @@ namespace AlbumReviews.Migrations
                         name: "FK_Reviews_Albums_AlbumId",
                         column: x => x.AlbumId,
                         principalTable: "Albums",
-                        principalColumn: "AlbumId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "AlbumId");
                     table.ForeignKey(
                         name: "FK_Reviews_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserId");
                 });
 
             migrationBuilder.CreateTable(
@@ -104,14 +101,12 @@ namespace AlbumReviews.Migrations
                         name: "FK_Replies_Reviews_ReviewId",
                         column: x => x.ReviewId,
                         principalTable: "Reviews",
-                        principalColumn: "ReviewId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ReviewId");
                     table.ForeignKey(
                         name: "FK_Replies_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserId");
                 });
 
             migrationBuilder.CreateIndex(

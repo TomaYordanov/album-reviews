@@ -21,32 +21,36 @@ namespace AlbumReviews.Data
             modelBuilder.Entity<Review>()
                 .HasOne(r => r.Album)
                 .WithMany(a => a.Reviews)
-                .HasForeignKey(r => r.AlbumId);
+                .HasForeignKey(r => r.AlbumId)
+                .OnDelete(DeleteBehavior.NoAction);
 
 
 
             modelBuilder.Entity<Review>()
                 .HasOne(r => r.User)
                 .WithMany(u => u.Reviews)
-                .HasForeignKey(r => r.UserId);
+                .HasForeignKey(r => r.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
 
 
             modelBuilder.Entity<Reply>()
                 .HasOne(r => r.Review)
                 .WithMany(r => r.Replies)
-                .HasForeignKey(r => r.ReviewId);
+                .HasForeignKey(r => r.ReviewId)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Reply>()
                 .HasOne(r => r.User)
                  .WithMany(u => u.Replies)
-                 .HasForeignKey(r => r.UserId);
-                  
+                 .HasForeignKey(r => r.UserId)
+                  .OnDelete(DeleteBehavior.NoAction);
 
 
             modelBuilder.Entity<Track>()
                 .HasOne(t => t.Album)
                 .WithMany(a => a.Tracks)
-                .HasForeignKey(t => t.AlbumId);
+                .HasForeignKey(t => t.AlbumId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

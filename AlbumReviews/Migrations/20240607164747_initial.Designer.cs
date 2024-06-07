@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbumReviews.Migrations
 {
     [DbContext(typeof(AlbumReviewsContext))]
-    [Migration("20240606190735_Initial")]
-    partial class Initial
+    [Migration("20240607164747_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -165,13 +165,13 @@ namespace AlbumReviews.Migrations
                     b.HasOne("AlbumReviews.Models.Review", "Review")
                         .WithMany("Replies")
                         .HasForeignKey("ReviewId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("AlbumReviews.Models.User", "User")
                         .WithMany("Replies")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Review");
@@ -184,13 +184,13 @@ namespace AlbumReviews.Migrations
                     b.HasOne("AlbumReviews.Models.Album", "Album")
                         .WithMany("Reviews")
                         .HasForeignKey("AlbumId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("AlbumReviews.Models.User", "User")
                         .WithMany("Reviews")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Album");
@@ -203,7 +203,7 @@ namespace AlbumReviews.Migrations
                     b.HasOne("AlbumReviews.Models.Album", "Album")
                         .WithMany("Tracks")
                         .HasForeignKey("AlbumId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Album");
