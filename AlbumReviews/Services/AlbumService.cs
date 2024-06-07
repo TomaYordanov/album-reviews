@@ -1,5 +1,4 @@
 ﻿using AlbumReviews.Data;
-using AlbumReviews.Migrations;
 using AlbumReviews.Models;
 using Microsoft.EntityFrameworkCore;
 

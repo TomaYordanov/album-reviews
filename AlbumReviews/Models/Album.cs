@@ -9,6 +9,7 @@ namespace AlbumReviews.Models
         [Required]
         [StringLength(100, MinimumLength = 1) ]
         public string Title { get; set; }
+        public string Cover { get; set; }
         [Required]
         [StringLength(100, MinimumLength = 1)]
         public string Artist { get; set; }
