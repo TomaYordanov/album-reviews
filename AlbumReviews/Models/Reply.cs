@@ -13,7 +13,7 @@ namespace AlbumReviews.Models
         public int ReviewId { get; set; }
         public Review Review { get; set; }
         [ForeignKey(nameof(User))]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public User User { get; set; }
        
         

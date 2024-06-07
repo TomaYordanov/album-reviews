@@ -1,16 +1,17 @@
 ﻿using AlbumReviews.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace AlbumReviews.Data
 {
-    public class AlbumReviewsContext : DbContext
+    public class AlbumReviewsContext : IdentityDbContext<User>
     {
         public AlbumReviewsContext(DbContextOptions<AlbumReviewsContext> options)
             : base(options)
         {
 
         }
-        public DbSet<User> Users { get; set; }
+        public override DbSet<User> Users { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Track> Tracks { get; set; }
@@ -51,6 +52,7 @@ namespace AlbumReviews.Data
                 .WithMany(a => a.Tracks)
                 .HasForeignKey(t => t.AlbumId)
                 .OnDelete(DeleteBehavior.NoAction);
+            base.OnModelCreating(modelBuilder);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

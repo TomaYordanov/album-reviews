@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using AlbumReviews.Data;
-
+using Microsoft.AspNetCore.Identity;
+using AlbumReviews.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -9,6 +10,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AlbumReviewsContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDefaultIdentity<User>(x => x.SignIn.RequireConfirmedEmail = false).AddRoles<IdentityRole>().AddEntityFrameworkStores<AlbumReviewsContext>();
 
 var app = builder.Build();
 
@@ -39,11 +41,13 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
 
 app.Run();
