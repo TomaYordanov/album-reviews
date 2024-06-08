@@ -1,4 +1,5 @@
 ﻿using AlbumReviews.Models;
+using AlbumReviews.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlbumReviews.Controllers
