@@ -2,6 +2,26 @@
 
 <h1>@Model.Title</h1>
 
+@if (User.Identity.IsAuthenticated)
+{
+    <form method="post" asp-page="/AddReview">
+        <div>
+            <label for="rating">Rating:</label>
+            <input type="number" name="rating" id="rating" min="0" max="100" required />
+        </div>
+        <div>
+            <label for="reviewContent">Review:</label><br />
+            <textarea name="reviewContent" rows="4" cols="50" required></textarea><br />
+        </div>
+        <input type="submit" value="Submit Review" />
+    </form>
+
+}
+else
+{
+    <p>Please <a asp-page="/Identity/Account/Login">login</a> to add a review.</p>
+}
+
 @if (Model.Reviews != null && Model.Reviews.Count > 0)
 {
     <ul>
