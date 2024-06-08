@@ -2,12 +2,12 @@
 @model List<AlbumViewModel>
 @{
 }
-<ul>
+
 @foreach(AlbumViewModel album in Model){
     <header>
         <a asp-controller="Review" asp-action="Index" asp-route-albumId="@album.AlbumId">@album.Title</a>
     </header>    
-    <img src="@album.Cover" alt="Cover image of @album.Title">
+    <img src="@album.Cover" alt="Cover image of @album.Title" class="album-cover">
     
         <p>
             @album.Artist
@@ -23,4 +23,4 @@
     
 
 }
-</ul>
+
