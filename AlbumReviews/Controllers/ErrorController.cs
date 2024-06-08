@@ -19,6 +19,8 @@ namespace AlbumReviews.Controllers
                     return View("Error403");
                 case 404:
                     return View("Error404");
+                case 500:
+                    return View("Error500");
                 default:
                     return View("Error", new ErrorViewModel { StatusCode = statusCode });
             }
