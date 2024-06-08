@@ -9,7 +9,7 @@ namespace AlbumReviews.Controllers
         private AlbumService albumService;
         public async Task<IActionResult> All()
         {
-            List<AlbumViewModel> albums =  (await albumService.GetAlbumsAsync()).Select(x => new AlbumViewModel {Title = x.Title, Artist = x.Artist, Genre = x.Genre, Cover = x.Cover, ReleaseDate = x.ReleaseYear}).ToList();   
+            List<AlbumViewModel> albums =  (await albumService.GetAlbumsAsync()).Select(x => new AlbumViewModel {Title = x.Title, Artist = x.Artist, Genre = x.Genre, Cover = x.Cover, ReleaseDate = x.ReleaseYear, AlbumId = x.AlbumId }).ToList();   
 
 
             return View(albums);

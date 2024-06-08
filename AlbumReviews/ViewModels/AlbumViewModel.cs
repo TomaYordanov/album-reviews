@@ -2,6 +2,7 @@
 {
     public class AlbumViewModel
     {
+        public int AlbumId { get; set; }
         public string Title { get; set; }
         public string Cover { get; set; }
         public string Artist { get; set; }

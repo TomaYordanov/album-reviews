@@ -1,0 +1,21 @@
+﻿@model AlbumReviews.ViewModels.AlbumReviewViewModel
+
+<h1>@Model.Title</h1>
+
+@if (Model.Reviews != null && Model.Reviews.Count > 0)
+{
+    <ul>
+        @foreach (var review in Model.Reviews)
+        {
+            <li>
+                <p>Rating: @review.Rating</p>
+                <p>@review.ReviewText</p>
+                <p>By: @review.UserName</p>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No reviews available for this album.</p>
+}
