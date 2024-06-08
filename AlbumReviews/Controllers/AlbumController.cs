@@ -6,17 +6,17 @@ namespace AlbumReviews.Controllers
 {
     public class AlbumController : Controller
     {
-        private AlbumService albumService;
+        private AlbumService _albumService;
         public async Task<IActionResult> All()
         {
-            List<AlbumViewModel> albums =  (await albumService.GetAlbumsAsync()).Select(x => new AlbumViewModel {Title = x.Title, Artist = x.Artist, Genre = x.Genre, Cover = x.Cover, ReleaseDate = x.ReleaseYear, AlbumId = x.AlbumId }).ToList();   
+            List<AlbumViewModel> albums =  (await _albumService.GetAlbumsAsync()).Select(x => new AlbumViewModel {Title = x.Title, Artist = x.Artist, Genre = x.Genre, Cover = x.Cover, ReleaseDate = x.ReleaseYear, AlbumId = x.AlbumId }).ToList();   
 
 
             return View(albums);
         }
         public AlbumController (AlbumService albumService)
         {
-            this.albumService = albumService;
+            this._albumService = albumService;
         }
     }
 }

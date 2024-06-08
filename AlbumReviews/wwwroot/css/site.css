@@ -14,14 +14,53 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background-color:#131215;
+    color:#ffffff;
+    margin-bottom: 60px;
+}
+a{
+    color: #1e90ff;
 }
 
+header{
+    border-bottom: 1px solid #333;
+}
+p{
+    margin: 10px 0;
+}
+header p {
+    margin: 5px 0;
+}
 
 .album-cover {
-    width:200px;
-    height 200px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    bottom: 1px solid #444;
 }
+.album-artist {
+    font-size: 0.9em; 
+    color: #b0b0b0;
+}
+
+.album-details {
+    font-size: 0.8em;
+    color: #a0a0a0;
+}
+.album-title {
+    font-weight: bold;
+    color: #ffffff;
+}
+navbar {
+    background-color: #333; 
+    color: #ffffff; 
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;

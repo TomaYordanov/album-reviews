@@ -3,24 +3,13 @@
 @{
 }
 
-@foreach(AlbumViewModel album in Model){
+@foreach (AlbumViewModel album in Model)
+{
     <header>
-        <a asp-controller="Review" asp-action="Index" asp-route-albumId="@album.AlbumId">@album.Title</a>
-    </header>    
+        <a asp-controller="Review" asp-action="Index" asp-route-albumId="@album.AlbumId" class="album-title">@album.Title</a>
+        <p class="album-artist">@album.Artist</p>
+    </header>
     <img src="@album.Cover" alt="Cover image of @album.Title" class="album-cover">
-    
-        <p>
-            @album.Artist
-        </p>
-        <p>
-            @album.ReleaseDate
-        </p>
-    <p>
-        @album.Genre
-    </p>
-    
-   
-    
 
+    <p class="album-details">@album.ReleaseDate, @album.Genre</p>
 }
-

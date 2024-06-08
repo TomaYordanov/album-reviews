@@ -4,7 +4,7 @@
     {
         public int ReviewId { get; set; }
         public int Rating { get; set; }
-        public string ReviewText { get; set; }
+        public string ReviewContent { get; set; }
         public string UserName { get; set; }
 
 
