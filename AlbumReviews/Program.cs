@@ -3,8 +3,8 @@ using AlbumReviews.Data;
 using Microsoft.AspNetCore.Identity;
 using AlbumReviews.Models;
 using AlbumReviews.Services;
-var builder = WebApplication.CreateBuilder(args);
 
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
@@ -28,14 +28,14 @@ using (var scope = app.Services.CreateScope())
         var context = services.GetRequiredService<AlbumReviewsContext>();
         context.Database.Migrate();
 
-        
+       
         var seeder = services.GetRequiredService<DbSeeder>();
         seeder.Seed();
     }
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An error occurred while applying migrations or seeding data.");
+        logger.LogError(ex, "An error occurred while applying migrations.");
     }
 }
 
@@ -49,8 +49,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();;
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
