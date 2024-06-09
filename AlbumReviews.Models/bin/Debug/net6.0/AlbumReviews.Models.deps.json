@@ -9,7 +9,8 @@
       "AlbumReviews.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.31",
-          "Microsoft.EntityFrameworkCore": "6.0.31"
+          "Microsoft.EntityFrameworkCore": "6.0.31",
+          "Microsoft.EntityFrameworkCore.InMemory": "6.0.31"
         },
         "runtime": {
           "AlbumReviews.Models.dll": {}
@@ -72,6 +73,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/6.0.31": {},
+      "Microsoft.EntityFrameworkCore.InMemory/6.0.31": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.31"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "6.0.31.0",
+            "fileVersion": "6.0.3124.26901"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/6.0.31": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.31",
@@ -279,6 +291,13 @@
       "sha512": "sha512-1v9d0P316ZrESIyijs724db34T9LDnA8ug8MwnvsIohd8y+xIXpkLsG9oDzH0MAitLGkTF9Jaas3EKx0lOyMJg==",
       "path": "microsoft.entityframeworkcore.analyzers/6.0.31",
       "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.31.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/6.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OGWMbsqAxen7IrKjzFEdxAMEHCxfH6Jmtug3RRbI3qSMKFmsAZqm2JLIunF1nJnYn0AjaKIXBmYW9hnyOB3z5g==",
+      "path": "microsoft.entityframeworkcore.inmemory/6.0.31",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.6.0.31.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/6.0.31": {
       "type": "package",

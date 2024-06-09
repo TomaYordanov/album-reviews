@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {}
+    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
+    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
         "projectName": "AlbumReviews.Models",
-        "projectPath": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
+        "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
         "packagesPath": "C:\\Users\\Toma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.Models\\obj\\",
+        "outputPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
               "version": "[6.0.31, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[6.0.31, )"
             }

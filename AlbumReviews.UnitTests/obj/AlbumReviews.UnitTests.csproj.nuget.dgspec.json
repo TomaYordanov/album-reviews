@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj": {}
+    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj": {
+    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj",
-        "projectName": "AlbumReviews.UnitTests",
-        "projectPath": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
+        "projectName": "AlbumReviews.Models",
+        "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
         "packagesPath": "C:\\Users\\Toma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.UnitTests\\obj\\",
+        "outputPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,9 +45,102 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj",
+        "projectName": "AlbumReviews.UnitTests",
+        "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\Toma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Toma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
+                "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj"
+              },
+              "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj": {
+                "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FakeItEasy": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
             },
             "NUnit": {
               "target": "Package",
@@ -78,6 +171,111 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj",
+        "projectName": "AlbumReviews",
+        "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj",
+        "packagesPath": "C:\\Users\\Toma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Toma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
+                "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

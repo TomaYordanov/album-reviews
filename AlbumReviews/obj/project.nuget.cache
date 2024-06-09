@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kGwykXyBjPEpSUx0JGMDmdvdpXi1tat0+TeWuUMNYXXe4+BymfkRQkc84b7aNqpsdcBgRjRTD4qi2KSbRZtNrQ==",
+  "dgSpecHash": "4irA8a6LJY2M27e86yYKL/8GTMFI4ficS6MEvBrgywTA2ObrucBlJeCzaOlSJhMRaSIXirnsZHCsStRYpTXbuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews\\AlbumReviews.csproj",
+  "projectFilePath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Toma\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -84,6 +84,7 @@
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.31\\microsoft.entityframeworkcore.abstractions.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.31\\microsoft.entityframeworkcore.analyzers.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.31\\microsoft.entityframeworkcore.design.6.0.31.nupkg.sha512",
+    "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.31\\microsoft.entityframeworkcore.inmemory.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.31\\microsoft.entityframeworkcore.relational.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.31\\microsoft.entityframeworkcore.sqlserver.6.0.31.nupkg.sha512",
     "C:\\Users\\Toma\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.31\\microsoft.entityframeworkcore.tools.6.0.31.nupkg.sha512",
