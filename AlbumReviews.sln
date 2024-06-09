@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumReviews", "AlbumReviews\AlbumReviews.csproj", "{FF322507-82F2-4791-9F00-988BA10EE70A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbumReviews", "AlbumReviews\AlbumReviews.csproj", "{FF322507-82F2-4791-9F00-988BA10EE70A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumReviews.Models", "AlbumReviews.Models\AlbumReviews.Models.csproj", "{476CD8E3-D364-424F-A0DC-DAC93A3258E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumReviews.UnitTests", "AlbumReviews.UnitTests\AlbumReviews.UnitTests.csproj", "{643BF228-CB27-456D-A367-2E0577499011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{FF322507-82F2-4791-9F00-988BA10EE70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF322507-82F2-4791-9F00-988BA10EE70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF322507-82F2-4791-9F00-988BA10EE70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476CD8E3-D364-424F-A0DC-DAC93A3258E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476CD8E3-D364-424F-A0DC-DAC93A3258E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476CD8E3-D364-424F-A0DC-DAC93A3258E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476CD8E3-D364-424F-A0DC-DAC93A3258E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{643BF228-CB27-456D-A367-2E0577499011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643BF228-CB27-456D-A367-2E0577499011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643BF228-CB27-456D-A367-2E0577499011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{643BF228-CB27-456D-A367-2E0577499011}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

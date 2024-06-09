@@ -7,7 +7,7 @@ namespace AlbumReviews.Services
 {
     public class ReviewService
     {
-        private AlbumReviewsContext _context;
+        private readonly AlbumReviewsContext _context;
         
         public ReviewService(AlbumReviewsContext context)
         {

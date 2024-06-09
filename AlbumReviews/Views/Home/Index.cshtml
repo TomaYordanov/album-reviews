@@ -1,8 +1,75 @@
-﻿@{
+﻿@model List<AlbumReviews.ViewModels.AlbumViewModel>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    
 </div>
+
+<div style="text-align: left; margin-bottom: 20px;">
+    <h2>Recent albums</h2>
+</div>
+
+<div class="album-container">
+    @foreach (var album in Model)
+    {
+        <div class="album-card">
+            @if (!string.IsNullOrEmpty(album.Cover))
+            {
+                <img src="@album.Cover" alt="Cover image of @album.Title" class="album-cover" />
+            }
+            <div class="album-info">
+                <h3>
+                    <a asp-controller="Review" asp-action="Index" asp-route-albumId="@album.AlbumId">@album.Title</a>
+                </h3>
+                <p>Artist: @album.Artist</p>
+                <p>Genre: @album.Genre</p>
+                <p>Release Date: @album.ReleaseDate</p>
+                <p>Reviews: @album.ReviewCount</p>
+                @if (album.AverageRating.HasValue)
+                {
+                    <p>Average Rating: @album.AverageRating.Value.ToString("0.0")</p>
+                    <div style="height: 5px; background-color: @(album.AverageRating <= 33 ? "red" : album.AverageRating <= 66 ? "yellow" : "green");"></div>
+                }
+                else
+                {
+                    <p>Average Rating: N/A</p>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@section Styles {
+    <style>
+        .album-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+
+        .album-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 200px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .album-cover {
+            width: 100%;
+            height: auto;
+        }
+
+        .album-info {
+            margin-top: 10px;
+        }
+
+            .album-info h3 {
+                margin: 10px 0;
+            }
+    </style>
+}

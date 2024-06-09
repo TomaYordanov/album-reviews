@@ -3878,6 +3878,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "AlbumReviews.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.31",
+          "Microsoft.EntityFrameworkCore": "6.0.31"
+        },
+        "compile": {
+          "bin/placeholder/AlbumReviews.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AlbumReviews.Models.dll": {}
+        }
       }
     }
   },
@@ -11081,10 +11095,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "AlbumReviews.Models/1.0.0": {
+      "type": "project",
+      "path": "../AlbumReviews.Models/AlbumReviews.Models.csproj",
+      "msbuildProject": "../AlbumReviews.Models/AlbumReviews.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AlbumReviews.Models >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.31",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.31",
       "Microsoft.EntityFrameworkCore >= 6.0.31",
@@ -11126,7 +11146,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
+              "projectPath": "C:\\Users\\Toma\\source\\repos\\AlbumReviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

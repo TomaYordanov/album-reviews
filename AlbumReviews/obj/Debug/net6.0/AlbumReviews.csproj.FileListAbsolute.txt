@@ -250,3 +250,5 @@ C:\Users\Toma\source\repos\AlbumReviews\AlbumReviews\bin\Debug\net6.0\runtimes\u
 C:\Users\Toma\source\repos\AlbumReviews\AlbumReviews\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Toma\source\repos\AlbumReviews\AlbumReviews\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Toma\source\repos\AlbumReviews\AlbumReviews\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Toma\source\repos\AlbumReviews\AlbumReviews\bin\Debug\net6.0\AlbumReviews.Models.dll
+C:\Users\Toma\source\repos\AlbumReviews\AlbumReviews\bin\Debug\net6.0\AlbumReviews.Models.pdb

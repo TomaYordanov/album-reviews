@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AlbumReviews.styles.css" asp-append-version="true" />
     <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <header>
@@ -31,7 +32,7 @@
                         </li>
                     </ul>
                 </div>
-                <partial name="_LoginPartial"/> 
+                <partial name="_LoginPartial" />
             </div>
         </nav>
     </header>

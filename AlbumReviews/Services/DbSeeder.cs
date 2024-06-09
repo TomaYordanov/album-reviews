@@ -1,5 +1,6 @@
 ﻿using AlbumReviews.Data;
 using AlbumReviews.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace AlbumReviews.Services
 {
@@ -14,6 +15,14 @@ namespace AlbumReviews.Services
 
         public void Seed()
         {
+            if (!_context.Roles.Any())
+            {
+
+                _context.Roles.AddRange(
+                  new IdentityRole { Name = "Admin", NormalizedName = "ADMIN" },
+                  new IdentityRole { Name = "Martin", NormalizedName = "MARTIN" }
+                  );
+            }
 
             if (!_context.Users.Any())
             {
