@@ -1,7 +1,7 @@
-﻿@using AlbumReviews.ViewModels;
-@model List<AlbumViewModel>
-@{
-}
+﻿
+@using AlbumReviews.ViewModels
+@using AlbumReviews.Services
+@model PaginatedList<AlbumViewModel>
 
 @foreach (AlbumViewModel album in Model)
 {
@@ -10,6 +10,45 @@
         <p class="album-artist">@album.Artist</p>
     </header>
     <img src="@album.Cover" alt="Cover image of @album.Title" class="album-cover">
-
     <p class="album-details">@album.ReleaseDate, @album.Genre</p>
 }
+
+<div>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            @if (Model.HasPreviousPage)
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-action="All" asp-route-pageNumber="@(Model.PageIndex - 1)">Previous</a>
+                </li>
+            }
+            else
+            {
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+            }
+
+            @for (var i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                    <a class="page-link" asp-action="All" asp-route-pageNumber="@i">@i</a>
+                </li>
+            }
+
+            @if (Model.HasNextPage)
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-action="All" asp-route-pageNumber="@(Model.PageIndex + 1)">Next</a>
+                </li>
+            }
+            else
+            {
+                <li class="page-item disabled">
+                    <span class="page-link">Next</span>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
+
