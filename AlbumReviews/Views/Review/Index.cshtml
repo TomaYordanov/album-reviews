@@ -1,10 +1,14 @@
 ﻿@model AlbumReviews.ViewModels.AlbumReviewViewModel
 
-<h1>@Model.Title</h1>
+<div style="display: flex; align-items: center;">
+    <img src="@Model.Cover" alt="Cover image of @Model.Title" style="width: 150px; height: auto; margin-right: 20px;" class="album-cover" />
+    <h1>@Model.Title</h1>
+</div>
 
 @if (User.Identity.IsAuthenticated)
 {
-    <form method="post" asp-page="/AddReview">
+    <form method="post" asp-action="AddReview" asp-route-albumId="@Model.AlbumId">
+        @Html.AntiForgeryToken()
         <div>
             <label for="rating">Rating:</label>
             <input type="number" name="rating" id="rating" min="0" max="100" required />
@@ -15,7 +19,6 @@
         </div>
         <input type="submit" value="Submit Review" />
     </form>
-
 }
 else
 {
@@ -29,8 +32,16 @@ else
         {
             <li>
                 <p>Rating: @review.Rating</p>
+                <div style="height: 5px; background-color: @(review.Rating <= 33 ? "red" : review.Rating <= 66 ? "yellow" : "green");"></div>
                 <p>@review.ReviewContent</p>
                 <p>By: @review.UserName</p>
+                @if (User.Identity.IsAuthenticated && User.Identity.Name == review.UserName)
+                {
+                    <form method="post" asp-action="DeleteReview" asp-route-reviewId="@review.ReviewId" asp-route-albumId="@Model.AlbumId">
+                        @Html.AntiForgeryToken()
+                        <input type="submit" value="Delete" />
+                    </form>
+                }
             </li>
         }
     </ul>
@@ -39,6 +50,7 @@ else
 {
     <p>No reviews available for this album.</p>
 }
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

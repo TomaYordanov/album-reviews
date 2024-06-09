@@ -6,15 +6,15 @@ namespace AlbumReviews.Services
 {
     public class AlbumService
     {
-        private AlbumReviewsContext dbcontext;
+        private AlbumReviewsContext _context;
 
-        public AlbumService(AlbumReviewsContext dbcontext) 
+        public AlbumService(AlbumReviewsContext _context) 
         { 
-            this.dbcontext = dbcontext;
+            this._context = _context;
         }
         public async Task<List<Album>> GetAlbumsAsync()
         {
-            return await dbcontext.Albums.ToListAsync();
+            return await _context.Albums.ToListAsync();
         } 
 
     }

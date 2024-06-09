@@ -14,9 +14,12 @@ builder.Services.AddDbContext<AlbumReviewsContext>(options =>
 builder.Services.AddDefaultIdentity<User>(x => x.SignIn.RequireConfirmedEmail = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AlbumReviewsContext>();
+builder.Services.AddAntiforgery(options => options.HeaderName = "X-CSRF-TOKEN");
 
 builder.Services.AddScoped<AlbumService>();
-builder.Services.AddScoped<DbSeeder>(); 
+builder.Services.AddScoped<DbSeeder>();
+builder.Services.AddScoped<ReviewService>();
+
 
 var app = builder.Build();
 
