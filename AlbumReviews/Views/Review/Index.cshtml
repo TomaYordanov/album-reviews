@@ -1,11 +1,11 @@
 ﻿@model AlbumReviews.ViewModels.AlbumReviewViewModel
 
 <div style="display: flex; align-items: center;">
-    <img src="@Model.Cover" alt="Cover image of @Model.Title" style="width: 150px; height: auto; margin-right: 20px;" class="album-cover" />
+    <img src="@Model.Cover" alt="Cover image of @Model.Title" style="width: 150px; height: auto; margin-right: 20px;" />
     <h1>@Model.Title</h1>
 </div>
 
-@if (User.Identity.IsAuthenticated)
+@if (User.Identity.IsAuthenticated && !(bool)ViewBag.HasUserReviewed)
 {
     <form method="post" asp-action="AddReview" asp-route-albumId="@Model.AlbumId">
         @Html.AntiForgeryToken()
@@ -19,6 +19,10 @@
         </div>
         <input type="submit" value="Submit Review" />
     </form>
+}
+else if (User.Identity.IsAuthenticated && (bool)ViewBag.HasUserReviewed)
+{
+    <p>You have already submitted a review for this album.</p>
 }
 else
 {

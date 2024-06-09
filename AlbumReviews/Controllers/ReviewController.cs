@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Security.Claims;
+using AlbumReviews.Models;
 
 namespace AlbumReviews.Controllers
 {
@@ -41,7 +43,9 @@ namespace AlbumReviews.Controllers
             {
                 return NotFound();
             }
-
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var hasUserReviewed = await _context.Reviews.AnyAsync(x => x.AlbumId == albumId && x.UserId == userId);
+            ViewBag.HasUserReviewed = hasUserReviewed;
             return View(album);
         }
         [HttpPost]
@@ -49,9 +53,25 @@ namespace AlbumReviews.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddReview (int albumId, int rating, string reviewContent)
         {
-            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value;
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            await _reviewService.AddReviewAsync(albumId, userId, rating, reviewContent);
+            var hasUserReviewed = await _context.Reviews
+                .AnyAsync(r => r.AlbumId == albumId && r.UserId == userId);
+
+            if (!hasUserReviewed)
+            {
+                var review = new Review
+                {
+                    AlbumId = albumId,
+                    UserId = userId,
+                    Rating = rating,
+                    ReviewText = reviewContent
+                };
+
+                _context.Reviews.Add(review);
+                await _context.SaveChangesAsync();
+            }
+
             return RedirectToAction(nameof(Index), new { albumId = albumId });
         }
         [HttpPost]
