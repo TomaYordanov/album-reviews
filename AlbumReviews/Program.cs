@@ -31,7 +31,7 @@ using (var scope = app.Services.CreateScope())
         var context = services.GetRequiredService<AlbumReviewsContext>();
         context.Database.Migrate();
 
-       
+
         var seeder = services.GetRequiredService<DbSeeder>();
         seeder.Seed();
     }

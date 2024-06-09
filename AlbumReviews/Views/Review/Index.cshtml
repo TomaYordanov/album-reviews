@@ -45,6 +45,17 @@ else
                         @Html.AntiForgeryToken()
                         <input type="submit" value="Delete" />
                     </form>
+                    <form method="get" asp-action="ViewReplies" asp-controller="Reply"  style="display: inline;">
+                        <button type="submit">View Replies</button>
+                        <input name="reviewId" value="@review.ReviewId" hidden />
+                    </form>
+                }
+                else
+                {
+                    <form method="get" asp-action="ViewReplies" asp-controller="Reply">
+                        <button type="submit">View Replies</button>
+                        <input name="reviewId" value="@review.ReviewId" hidden />
+                    </form>
                 }
             </li>
         }

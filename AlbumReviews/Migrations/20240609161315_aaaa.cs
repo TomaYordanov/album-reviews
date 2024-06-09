@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AlbumReviews.Migrations
 {
-    public partial class migraciq : Migration
+    public partial class aaaa : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -222,7 +222,7 @@ namespace AlbumReviews.Migrations
                 {
                     ReplyId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ReplyText = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ReplyContent = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ReviewId = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },

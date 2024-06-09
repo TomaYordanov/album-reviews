@@ -65,7 +65,7 @@ namespace AlbumReviews.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReplyId"), 1L, 1);
 
-                    b.Property<string>("ReplyText")
+                    b.Property<string>("ReplyContent")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

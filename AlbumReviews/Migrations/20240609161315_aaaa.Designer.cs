@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbumReviews.Migrations
 {
     [DbContext(typeof(AlbumReviewsContext))]
-    [Migration("20240607184327_migraciq")]
-    partial class migraciq
+    [Migration("20240609161315_aaaa")]
+    partial class aaaa
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,7 +67,7 @@ namespace AlbumReviews.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReplyId"), 1L, 1);
 
-                    b.Property<string>("ReplyText")
+                    b.Property<string>("ReplyContent")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

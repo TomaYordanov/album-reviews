@@ -1,0 +1,38 @@
+﻿
+@model List<AlbumReviews.ViewModels.ReplyViewModel>
+
+<h1>Replies</h1>
+
+@if (Model == null || Model.Count == 0)
+{
+    <p>There are no replies for this review.</p>
+}
+else
+{
+    <ul>
+        @foreach (var reply in Model)
+        {
+            <li>
+                <p>@reply.ReplyContent</p>
+                <p>By: @reply.UserName</p>
+            </li>
+        }
+    </ul>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <form asp-controller="Reply" method="post" asp-action="AddReply">
+        @Html.AntiForgeryToken()
+        <div>
+            <label for="replyContent">Add Reply:</label><br />
+            <textarea name="replyContent" rows="4" cols="50" required></textarea><br />
+        </div>
+        <input type="submit" value="Submit Reply"  />
+        <input name="reviewId" value="@ViewData["ReviewId"]" hidden/>
+    </form>
+}
+else
+{
+    <p>Please <a asp-page="/Identity/Account/Login">login</a> to add a reply.</p>
+}
