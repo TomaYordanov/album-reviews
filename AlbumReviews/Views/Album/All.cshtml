@@ -1,23 +1,49 @@
-﻿@using AlbumReviews.ViewModels
-@using AlbumReviews.Services
+﻿@using AlbumReviews.ViewModels;
+@using AlbumReviews.Services;
 @model PaginatedList<AlbumViewModel>
 
-<div class="search-container">
+<div class="search-container" style="text-align: right;">
     <form method="get" asp-action="All" class="search-form">
         <input type="text" name="searchString" placeholder="Search by title or artist..." value="@ViewData["CurrentFilter"]" />
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
 </div>
 
-@foreach (AlbumViewModel album in Model)
-{
-    <header>
-        <a asp-controller="Review" asp-action="Index" asp-route-albumId="@album.AlbumId" class="album-title">@album.Title</a>
-        <p class="album-artist">@album.Artist</p>
-    </header>
-    <img src="@album.Cover" alt="Cover image of @album.Title" class="album-cover">
-    <p class="album-details">@album.ReleaseDate, @album.Genre</p>
-}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="white-text">
+                <a asp-action="All" asp-route-sortOrder="@ViewData["TitleSortParam"]">@Html.DisplayNameFor(model => model[0].Title)</a>
+            </th>
+            <th class="white-text">Album Cover</th>
+            <th class="white-text">
+                <a asp-action="All" asp-route-sortOrder="@ViewData["ArtistSortParam"]">@Html.DisplayNameFor(model => model[0].Artist)</a>
+            </th>
+            <th class="white-text">Release Year</th>
+            <th class="white-text">Genre</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var album in Model)
+        {
+            <tr>
+                <td class="white-text">
+                    <a asp-controller="Review" asp-action="Index" asp-route-albumId="@album.AlbumId">@album.Title</a>
+                </td>
+                <td>
+                    <img src="@album.Cover" alt="Album Cover" style="width: 50px; height: 50px; margin-right: 10px;" />
+                </td>
+                <td class="white-text">@album.Artist</td>
+                <td class="white-text">@album.ReleaseDate</td>
+                <td class="white-text">@album.Genre</td>
+                <td>
+                    <a asp-controller="Review" asp-action="Index" asp-route-albumId="@album.AlbumId" class="btn btn-primary">Reviews</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 <div>
     <nav aria-label="Page navigation">

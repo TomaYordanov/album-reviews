@@ -1,19 +1,33 @@
 ﻿@model AlbumReviews.ViewModels.AlbumReviewViewModel
 
 <div style="display: flex; align-items: center;">
-    <img src="@Model.Cover" alt="Cover image of @Model.Title" style="width: 150px; height: auto; margin-right: 20px;" />
+    <img src="@Model.Cover" alt="Cover image of @Model.Title" style="width: 200px; height: auto; margin-right: 40px;" class="album-cover" />
     <h1>@Model.Title</h1>
 </div>
 
 @if (User.Identity.IsAuthenticated && !(bool)ViewBag.HasUserReviewed)
 {
-    <form method="post" asp-action="AddReview" asp-route-albumId="@Model.AlbumId">
+    <form method="post" asp-action="AddReview" asp-route-albumId="@Model.AlbumId" style="margin-top: 20px;">
         @Html.AntiForgeryToken()
-        <div>
+        <div style="margin-bottom: 10px;">
             <label for="rating">Rating:</label>
-            <input type="number" name="rating" id="rating" min="0" max="100" required />
+            <input type="range" name="rating" id="rating" min="0" max="100" value="50" required list="steplist"/>
+            &nbsp; <span id="range-label">50</span>
+            <datalist id="steplist">
+                <option>0</option>
+                <option>25</option>
+                <option>50</option>
+                <option>75</option>
+                <option>100</option>
+            </datalist>
+            <script>
+                let range = document.getElementById("rating");
+                range.addEventListener("input", () => {
+                    document.getElementById("range-label").innerText = Math.round(range.value);
+                });
+            </script>
         </div>
-        <div>
+        <div style="margin-bottom: 10px;">
             <label for="reviewContent">Review:</label><br />
             <textarea name="reviewContent" rows="4" cols="50" required></textarea><br />
         </div>
@@ -22,37 +36,40 @@
 }
 else if (User.Identity.IsAuthenticated && (bool)ViewBag.HasUserReviewed)
 {
-    <p>You have already submitted a review for this album.</p>
+    <p style="margin-top: 20px;">You have already submitted a review for this album.</p>
 }
-else
+@if (!User.Identity.IsAuthenticated)
 {
-    <p>Please <a asp-page="/Identity/Account/Login">login</a> to add a review.</p>
+    <p style="margin-top: 20px;">Please <a asp-area="Identity" asp-page="/Account/Login">login</a> to add a review.</p>
 }
+
 
 @if (Model.Reviews != null && Model.Reviews.Count > 0)
 {
-    <ul>
+    <ul style="margin-top: 20px;">
         @foreach (var review in Model.Reviews)
         {
-            <li>
+            <li style="margin-bottom: 20px;">
                 <p>Rating: @review.Rating</p>
-                <div style="height: 5px; background-color: @(review.Rating <= 33 ? "red" : review.Rating <= 66 ? "yellow" : "green");"></div>
+                <div class="progress-container" style="height: 5px;">
+                    <div class="progress" style="width: @(review.Rating)%; background-color: @(review.Rating <= 33 ? "red" : review.Rating <= 66 ? "yellow" : "green");"></div>
+                </div>
                 <p>@review.ReviewContent</p>
                 <p>By: @review.UserName</p>
                 @if (User.Identity.IsAuthenticated && User.Identity.Name == review.UserName)
                 {
-                    <form method="post" asp-action="DeleteReview" asp-route-reviewId="@review.ReviewId" asp-route-albumId="@Model.AlbumId">
+                    <form method="post" asp-action="DeleteReview" asp-route-reviewId="@review.ReviewId" asp-route-albumId="@Model.AlbumId" style="display: inline;">
                         @Html.AntiForgeryToken()
                         <input type="submit" value="Delete" />
                     </form>
-                    <form method="get" asp-action="ViewReplies" asp-controller="Reply"  style="display: inline;">
+                    <form method="get" asp-action="ViewReplies" asp-controller="Reply" style="display: inline; margin-left: 10px;">
                         <button type="submit">View Replies</button>
                         <input name="reviewId" value="@review.ReviewId" hidden />
                     </form>
                 }
                 else
                 {
-                    <form method="get" asp-action="ViewReplies" asp-controller="Reply">
+                    <form method="get" asp-action="ViewReplies" asp-controller="Reply" style="display: inline; margin-left: 10px;">
                         <button type="submit">View Replies</button>
                         <input name="reviewId" value="@review.ReviewId" hidden />
                     </form>

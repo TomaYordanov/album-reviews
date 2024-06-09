@@ -21,23 +21,26 @@
                 <img src="@album.Cover" alt="Cover image of @album.Title" class="album-cover" />
             }
             <div class="album-info">
-                <h3>
+                <h3 class="album-title">
                     <a asp-controller="Review" asp-action="Index" asp-route-albumId="@album.AlbumId">@album.Title</a>
                 </h3>
-                <p>Artist: @album.Artist</p>
-                <p>Genre: @album.Genre</p>
-                <p>Release Date: @album.ReleaseDate</p>
-                <p>Reviews: @album.ReviewCount</p>
+                <dt>Artist:</dt><dd>@album.Artist</dd>
+                <dt>Genre:</dt><dd>@album.Genre</dd>
+                <dt>p>Release Date:</dt><dd>@album.ReleaseDate</dd>
+                <dt>Reviews:</dt><dd>@album.ReviewCount</dd>
                 @if (album.AverageRating.HasValue)
                 {
                     <p>Average Rating: @album.AverageRating.Value.ToString("0.0")</p>
-                    <div style="height: 5px; background-color: @(album.AverageRating <= 33 ? "red" : album.AverageRating <= 66 ? "yellow" : "green");"></div>
+                    <div style="height: 5px;">
+                        <div class="progress" style="width: @(album.AverageRating)%; background-color: @(album.AverageRating <= 33 ? "red" : album.AverageRating <= 66 ? "yellow" : "green");"></div>
+                    </div>
                 }
                 else
                 {
                     <p>Average Rating: N/A</p>
                 }
             </div>
+
         </div>
     }
 </div>
@@ -52,8 +55,9 @@
         }
 
         .album-card {
-            border: 1px solid #ddd;
-            padding: 10px;
+            border: 2px solid #888; 
+            border-radius: 10px; 
+            overflow: hidden; 
             width: 200px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             text-align: left;
@@ -62,14 +66,38 @@
         .album-cover {
             width: 100%;
             height: auto;
+            border-bottom: 1px solid #888; 
         }
 
         .album-info {
-            margin-top: 10px;
+            padding: 10px; 
+            background-color: #333; 
         }
 
             .album-info h3 {
-                margin: 10px 0;
+                margin: 0; 
+                color: white; 
             }
+
+            .album-info p {
+                margin: 5px 0; 
+                color: white; 
+            }
+
+        .progress {
+            height: 5px;
+            border-radius: 5px;
+            margin-top: 5px;
+            .album-title
+        }
+         .album-title{
+            margin: 0;
+            color: white;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     </style>
 }
+

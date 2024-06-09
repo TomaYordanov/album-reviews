@@ -14,12 +14,21 @@ html {
 }
 
 body {
-    background-color:#131215;
+    background-color: #b2a1d3;
     color:#ffffff;
     margin-bottom: 60px;
 }
 a{
     color: #1e90ff;
+    text-decoration:none;
+}
+
+dt, dd {
+    display: inline;
+}
+
+dt {
+    margin-right: 0.5em;
 }
 
 header{
@@ -52,6 +61,7 @@ header p {
 .album-title {
     font-weight: bold;
     color: #ffffff;
+    font-size: large;
 }
 navbar {
     background-color: #333; 
@@ -64,3 +74,7 @@ navbar {
 
 .navbar-nav .nav-link {
     color: #ffffff;
+}
+.white-text{
+    color:white;
+}
