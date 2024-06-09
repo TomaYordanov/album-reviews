@@ -12,9 +12,20 @@ namespace AlbumReviews.Controllers
     public class AlbumController : Controller
     {
         private AlbumService _albumService;
-        public async Task<IActionResult> All(int pageNumber = 1, int pageSize = 10)
+        public async Task<IActionResult> All(string searchString, int pageNumber = 1, int pageSize = 10)
         {
-            var albums = await _albumService.GetAlbumsPagedAsync(pageNumber, pageSize);
+            ViewData["CurrentFilter"] = searchString;
+
+            IQueryable<Album> albumsQuery = _albumService.GetAlbumsQueryable();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                albumsQuery = albumsQuery.Where(a =>
+                    a.Title.Contains(searchString) || a.Artist.Contains(searchString));
+            }
+
+            var albums = await _albumService.GetAlbumsPagedAsync(albumsQuery, pageNumber, pageSize);
+
             var albumViewModels = albums.Select(album => new AlbumViewModel
             {
                 AlbumId = album.AlbumId,

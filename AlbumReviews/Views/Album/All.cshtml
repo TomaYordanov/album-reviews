@@ -1,7 +1,13 @@
-﻿
-@using AlbumReviews.ViewModels
+﻿@using AlbumReviews.ViewModels
 @using AlbumReviews.Services
 @model PaginatedList<AlbumViewModel>
+
+<div class="search-container">
+    <form method="get" asp-action="All" class="search-form">
+        <input type="text" name="searchString" placeholder="Search by title or artist..." value="@ViewData["CurrentFilter"]" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
 
 @foreach (AlbumViewModel album in Model)
 {
@@ -51,4 +57,3 @@
         </ul>
     </nav>
 </div>
-

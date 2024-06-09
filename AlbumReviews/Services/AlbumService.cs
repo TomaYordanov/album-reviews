@@ -19,9 +19,13 @@ namespace AlbumReviews.Services
         {
             return await _context.Albums.ToListAsync();
         }
-        public async Task<PaginatedList<Album>> GetAlbumsPagedAsync(int pageNumber, int pageSize)
+        public IQueryable<Album> GetAlbumsQueryable()
         {
-            var query = _context.Albums.AsQueryable();
+            return _context.Albums.AsQueryable();
+        }
+        public async Task<PaginatedList<Album>> GetAlbumsPagedAsync(IQueryable<Album> query, int pageNumber, int pageSize)
+        {
+            var _query = _context.Albums.AsQueryable();
             return await PaginatedList<Album>.CreateAsync(query, pageNumber, pageSize);
         }
 
