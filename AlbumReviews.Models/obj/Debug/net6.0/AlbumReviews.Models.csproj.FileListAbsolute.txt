@@ -22,3 +22,15 @@ C:\Users\Toma\source\repos\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\Al
 C:\Users\Toma\source\repos\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\refint\AlbumReviews.Models.dll
 C:\Users\Toma\source\repos\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\AlbumReviews.Models.pdb
 C:\Users\Toma\source\repos\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\ref\AlbumReviews.Models.dll
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\bin\Debug\net6.0\AlbumReviews.Models.deps.json
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\bin\Debug\net6.0\AlbumReviews.Models.dll
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\bin\Debug\net6.0\AlbumReviews.Models.pdb
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\AlbumReviews.Models.csproj.AssemblyReference.cache
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\AlbumReviews.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\AlbumReviews.Models.AssemblyInfoInputs.cache
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\AlbumReviews.Models.AssemblyInfo.cs
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\AlbumReviews.Models.csproj.CoreCompileInputs.cache
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\AlbumReviews.Models.dll
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\refint\AlbumReviews.Models.dll
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\AlbumReviews.Models.pdb
+C:\Users\toma\source\repos\Asp.net\album-reviews\AlbumReviews.Models\obj\Debug\net6.0\ref\AlbumReviews.Models.dll

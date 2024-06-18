@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj": {}
+    "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
+    "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
+        "projectUniqueName": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
         "projectName": "AlbumReviews.Models",
-        "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
-        "packagesPath": "C:\\Users\\Toma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\obj\\",
+        "projectPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj",
+        "packagesPath": "C:\\Users\\toma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Toma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\toma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,24 +74,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj": {
+    "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj",
         "projectName": "AlbumReviews.UnitTests",
-        "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\Toma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.UnitTests\\obj\\",
+        "projectPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.UnitTests\\AlbumReviews.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\toma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Toma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\toma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -107,11 +107,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
-                "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj"
+              "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
+                "projectPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj"
               },
-              "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj": {
-                "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj"
+              "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews\\AlbumReviews.csproj": {
+                "projectPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews\\AlbumReviews.csproj"
               }
             }
           }
@@ -175,24 +175,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj": {
+    "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews\\AlbumReviews.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj",
+        "projectUniqueName": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews\\AlbumReviews.csproj",
         "projectName": "AlbumReviews",
-        "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\AlbumReviews.csproj",
-        "packagesPath": "C:\\Users\\Toma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews\\obj\\",
+        "projectPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews\\AlbumReviews.csproj",
+        "packagesPath": "C:\\Users\\toma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Toma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\toma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -202,14 +202,15 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
-                "projectPath": "C:\\Users\\Toma\\source\\repos\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj"
+              "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj": {
+                "projectPath": "C:\\Users\\toma\\source\\repos\\Asp.net\\album-reviews\\AlbumReviews.Models\\AlbumReviews.Models.csproj"
               }
             }
           }
@@ -280,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

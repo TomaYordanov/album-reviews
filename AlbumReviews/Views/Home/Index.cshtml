@@ -4,15 +4,11 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-</div>
-
 <div style="text-align: left; margin-bottom: 20px;">
     <h2>Most recent albums</h2>
 </div>
 
-<div class="album-container">
+<div  class="album-container">
     @foreach (var album in Model)
     {
         <div class="album-card">

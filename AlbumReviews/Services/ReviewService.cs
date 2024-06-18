@@ -29,11 +29,17 @@ namespace AlbumReviews.Services
         }
         public async Task<bool> DeleteReviewAsync(int reviewId, string userId)
         {
-            var review = await _context.Reviews.FirstOrDefaultAsync(x => x.ReviewId == reviewId && x.UserId == userId);
+            var review = await _context.Reviews.Include(x => x.Replies).FirstOrDefaultAsync(x => x.ReviewId == reviewId && x.UserId == userId);
             if(review == null)
             {
                 return false;
             }
+
+            foreach (var reply in review.Replies)
+            {
+                _context.Replies.Remove(reply);
+            }
+
             _context.Reviews.Remove(review);
             await _context.SaveChangesAsync();
             return true;
